@@ -3,4 +3,4 @@ def uniq_add(my_list=[]):
     unique_total = 0
     for i in set(my_list):
         unique_total += i
-    return(unique_total)
+    return (unique_total)
