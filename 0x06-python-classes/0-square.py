@@ -6,5 +6,5 @@ Defines class Square
 
 
 class Square:
-    """Empty class"""
+    """Class is Empty"""
     pass
