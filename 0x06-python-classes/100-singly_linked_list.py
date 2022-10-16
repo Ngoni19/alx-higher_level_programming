@@ -104,11 +104,11 @@ class SinglyLinkedList:
         Str -> singly linked list needed to print
         """
         string = ""
-        temp = self.__head
-        while temp is not None:
-            string += str(temp.data)
-            temp = temp.next_node
-            if temp is not None:
+        tp = self.__head
+        while tp is not None:
+            string += str(tp.data)
+            tp = tp.next_node
+            if tp is not None:
                 string += "\n"
         return string
 
@@ -119,19 +119,19 @@ class SinglyLinkedList:
         Args:
         value: int data for node
         """
-        new_d = Node(value)
+        nW = Node(value)
         if self.__head is None:
-            self.__head = new_d
+            self.__head = nW
             return
 
-        temp = self.__head
-        if new_d.data < temp.data:
-            new_d.next_node = self.__head
-            self.__head = new_d
+        tp = self.__head
+        if nW.data < tp.data:
+            nW.next_node = self.__head
+            self.__head = nW
             return
 
-        while (temp.next_node is not None) and (new_d.data > temp.next_node.data):
-            temp = temp.next_node
-        new_d.next_node = temp.next_node
-        temp.next_node = new_d
+        while (tp.next_node is not None) and (nW.data > tp.next_node.data):
+            tp = tp.next_node
+        nW.next_node = tp.next_node
+        tp.next_node = nW
         return
