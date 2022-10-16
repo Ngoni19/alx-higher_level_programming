@@ -68,4 +68,4 @@ class Square:
         """
         Print square with #'s
         """
-        print("".join(["#" * self.__size for rows in range(self.__size)]))
+        print("\n".join(["#" * self.__size for rows in range(self.__size)]))
