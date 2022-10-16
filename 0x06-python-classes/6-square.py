@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
-Module -> 6-square
-Def class Square with private size & position; & public area
-access & update size and position
-prints to stdout the square -> #'s
+Module 6-square
+Defines class Square with private size & position; & public area
+access & update size & position
+print square to stdout -> using #'s
 """
 
 
@@ -50,7 +50,7 @@ class Square:
         Setter
 
         Args:
-            value: sets size to value if int and >= 0
+            value: set size to value if int & >= 0
         """
         if type(value) is not int:
             raise TypeError("size must be an integer")
@@ -74,8 +74,7 @@ class Square:
         Setter
 
         Args:
-            value: sets position to tuple
-            if value is tuple of 2 positive int
+            value: set position to tuple if value: tuple of 2 positive ints
         """
         if type(value) is not tuple or len(value) != 2 or \
            type(value[0]) is not int or type(value[1]) is not int or \
@@ -98,6 +97,6 @@ class Square:
             print("")
         else:
             print("\n" * self.__position[1], end="")
-            print("".join([" " * self.__position[0] +
+            print("\n".join([" " * self.__position[0] +
                              "#" * self.__size
                              for k in range(self.__size)]))
