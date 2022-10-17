@@ -76,7 +76,7 @@ class Rectangle():
         return self.__width * self.__height
 
     def perimeter(self):
-        """ Return (2*width + 2*height || (return 0; if width || height is 0)"""
+        """ Return(2*width + 2*height ||(return 0;if width||height is 0)"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return (2 * self.__width) + (2 * self.height)
@@ -85,8 +85,8 @@ class Rectangle():
         """ Print rectangle with #'s """
         if self.__width == 0 or self.__height == 0:
             return ""
-        pic = "\n".join(["#" * self.__width for rows in range(self.__height)])
-        return pic
+        r_p = "\n".join(["#" * self.__width for rows in range(self.__height)])
+        return r_p
 
     def __repr__(self):
         """ String rep to recreate new instance """

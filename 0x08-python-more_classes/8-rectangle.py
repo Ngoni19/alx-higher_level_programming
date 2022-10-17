@@ -89,9 +89,9 @@ class Rectangle():
         """ Print rectangle with #'s """
         if self.__width == 0 or self.__height == 0:
             return ""
-        rect_print = "\n".join([str(self.print_symbol) * self.__width
+        r_p = "\n".join([str(self.print_symbol) * self.__width
                          for rows in range(self.__height)])
-        return rect_print
+        return r_p
 
     def __repr__(self):
         """ String repr to recreate new instance """

@@ -82,7 +82,7 @@ class Rectangle():
         return self.__width * self.__height
 
     def perimeter(self):
-        """ Return (2*width + 2*height (|| return 0; if width || height is 0)"""
+        """ Return(2*width + 2*height||return 0;if width||height is 0)"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return (2 * self.__width) + (2 * self.height)
@@ -91,9 +91,9 @@ class Rectangle():
         """ Print rectangle with #'s """
         if self.__width == 0 or self.__height == 0:
             return ""
-        rect_print = "\n".join([str(self.print_symbol) * self.__width
+        r_p = "\n".join([str(self.print_symbol) * self.__width
                          for rows in range(self.__height)])
-        return rect_print
+        return r_p
 
     def __repr__(self):
         """ Str representation to recreate new instance """
@@ -109,8 +109,7 @@ class Rectangle():
                                    isinstance(rect_1, Rectangle)
                                    else "rect_2"))
         if rect_2.area() < rect_1.area():
-            
-        return rect_1
+            return rect_1
 
     @classmethod
     def square(cls, size=0):

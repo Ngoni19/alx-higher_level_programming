@@ -71,5 +71,5 @@ class Rectangle:
         """ Prints rectangle with #'s """
         if self.__width == 0 or self.__height == 0:
             return ""
-        rect_print = "\n".join(["#" * self.__width for rows in range(self.__height)])
-        return rect_print
+        r_p = "\n".join(["#" * self.__width for rows in range(self.__height)])
+        return r_p
