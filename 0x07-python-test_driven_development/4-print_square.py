@@ -8,7 +8,7 @@ arg: an int size
 
 def print_square(size):
     """
-    Given int size- Print the square with #'s 
+    Given int size- Print the square with #'s
     """
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
