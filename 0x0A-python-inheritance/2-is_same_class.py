@@ -11,7 +11,6 @@ def is_same_class(obj, a_class):
     """
     Notes:
         use type() to get specific class
-      
     Return:
         True if obj is exactly an instance of specified class
     """
