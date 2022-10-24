@@ -1,0 +1,71 @@
+# run - > python3 -m doctest -v ./tests/[filename].txt
+
+Import method to test
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+SUCCESS CASES:
+
+Test ints greater than 0 (no error or returns anything):
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("checkme", 111)
+
+FAIL CASES:
+
+Test ints <= 0:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("what", 0)
+     Traceback (most recent call last):
+     ...
+     ValueError: checkme must be greater than 0
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("checkme", -999)
+     Traceback (most recent call last):
+     ...
+     ValueError: checkme must be greater than 0
+
+Test non-implemented area method
+     >>> bg = BaseGeometry()
+     >>> bg.area()
+     Traceback (most recent call last):
+     ...
+     Exception: area() is not implemented
+Test invalid number of args:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator()
+     Traceback (most recent call last):
+     ...
+     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("nameme")
+     Traceback (most recent call last):
+     ...
+     TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Test not ints types:
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("alx", None)
+     Traceback (most recent call last):
+     ...
+     TypeError: alx must be an integer
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("say", "alx!")
+     Traceback (most recent call last):
+     ...
+     TypeError: say must be an integer
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("python", "20")
+     Traceback (most recent call last):
+     ...
+     TypeError: python must be an integer
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("alx", [5, 6, 7])
+     Traceback (most recent call last):
+     ...
+     TypeError: alx must be an integer
+
