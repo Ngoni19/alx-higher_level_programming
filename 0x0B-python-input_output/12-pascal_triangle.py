@@ -24,6 +24,8 @@ def pascal_triangle(n):
 
     pascal_tri = [[1]]
     for rows in range(n-1):
-        pascal_tri.append([x+y for x, y in zip([0] + pascal_tri[-1],
-                            pascal_tri[-1] + [0])])
+        pascal_tri.append([x+y for x,
+            y in zip([0] + pascal_tri[-1],
+                pascal_tri[-1] + [0])])
+
     return pascal_tri
