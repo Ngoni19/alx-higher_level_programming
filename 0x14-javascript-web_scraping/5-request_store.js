@@ -1,11 +1,11 @@
 #!/usr/bin/node
 
-let url = process.argv[2];
+let URL = process.argv[2];
 let file_name = process.argv[3];
 const fs = require('fs');
-const req = require('req');
+const request = require('request');
 
-req(url, function (err, response, body) {
+request(URL, function (err, response, body) {
   if (err) {
     console.log(err);
   } else {
