@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-let fA = process.argv[2];
-let fB = process.argv[3];
-let fC = process.argv[4];
+const fA = process.argv[2];
+const fB = process.argv[3];
+const fC = process.argv[4];
 const fs = require('fs');
-let txtA = fs.readFileSync(fA, 'utf8');
-let txtB = fs.readFileSync(fB, 'utf8');
+const txtA = fs.readFileSync(fA, 'utf8');
+const txtB = fs.readFileSync(fB, 'utf8');
 fs.writeFileSync(fC, txtA + txtB);
