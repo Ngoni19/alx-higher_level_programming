@@ -23,7 +23,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Multiple table in database querying & printing information from tables(state)
+    # Multiple table in database querying & printing info from table
     for k in session.query(State.name, City.id, City.name).filter(
             State.id == City.state_id).order_by(City.id):
         print("{:s}: ({:d}) {:s}".format(k[0], k[1], k[2]))
